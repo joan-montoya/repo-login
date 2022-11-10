@@ -1,0 +1,9 @@
+<div *ngIf="auth == 'true'"> 
+    <br><br><br>
+    <h1>Tienes permitido acceder </h1>
+</div>
+<div *ngIf="auth == 'false'"> 
+    <br><br><br>
+    <h1>No tienes permitido acceder </h1>
+    <h1><a [routerLink]="['/login']">inicia secion</a> para acceder </h1>
+</div>

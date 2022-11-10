@@ -1,0 +1,21 @@
+.cardo{
+    position: relative;
+    left: 18%;
+    height: 55px;
+}
+#cards{
+    height: 55px;
+}
+#but{
+    position: relative;
+    right: 0px;
+    width: 180px;
+}
+#but2{
+    position: relative;
+    left: 65px;
+    width: 180px;
+}
+.container{
+    width: 80%;
+}

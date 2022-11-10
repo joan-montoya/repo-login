@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="/home">Home</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a *ngIf="auth == 'true'"class="nav-link" href="/cap">Capitulos</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="auth == 'true'" class="nav-link" href="/otros">Otros</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="rol === '3'" class="nav-link" href="/roles">Administracion</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="auth == 'true'" class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="usuario">
+        <h3>{{usuario}}</h3>
+      </div>
+      
+      <button *ngIf="auth == 'false'" [routerLink]="['/login']" class="btn btn-outline-success my-2 my-sm-0" type="submit">Iniciar secion</button>
+      <button *ngIf="auth == 'true'"  (click)="salir()" class="btn btn-outline-danger" type="submit">Salir</button>
+    </form>
+  </div>
+</nav>
+<!-- <ul>
+  <li><a [routerLink]="['/login']">Login</a></li>
+  <li><a [routerLink]="['/sigin']">Registro</a></li>
+  <li><a  *ngIf="auth == 'true'" [routerLink]="['/vents']">Ventas</a></li>
+  <li><button  type="submit" (click)="salir()">salir</button></li>
+</ul> -->
+<router-outlet></router-outlet>

@@ -1,0 +1,48 @@
+<div *ngIf="rol === '3'">
+  <div class="container">
+    <div *ngFor="let usuario of usuarios">
+
+      <div *ngIf="usuario._id != id">
+        <div class="card bg-light" *ngIf="usuario.rol == '1'">
+          <h5 class="card-header">Usuario</h5>
+          <div class="card-body">
+            <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+            <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+            <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="usuario._id != id">
+        <div class="card text-white bg-info" *ngIf="usuario.rol == '2'">
+          <h5 class="card-header">Usuario nivel 2</h5>
+          <div class="card-body">
+            <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+            <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+            <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="usuario._id != id">
+        <div class="card text-white bg-warning" *ngIf="usuario.rol == '3'">
+          <h5 class="card-header">Administrador</h5>
+          <div class="card-body">
+            <h2 class="card-title">{{usuario.nombre}} {{usuario.apellidos}}</h2>
+            <button (click)="acenderUsuario(usuario)" id="but" class="btn btn-success" type="submit">Ascender </button>
+            <button (click)="degradarUsuario(usuario)" id="but2" class="btn btn-danger" type="submit">Degradar</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+  </div>
+</div>
+<div *ngIf="rol != '3'">
+  <h1>solo personal autorizado</h1>
+</div>
+
+
+

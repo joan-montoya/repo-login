@@ -1,0 +1,17 @@
+
+  body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    font-size: 100%;
+    color: #1b262c;
+    
+    margin: 0;
+    background-color: #0f4c75;
+}
+.usuario{
+  position: absolute;
+  top: 10px;
+  right: 180px;
+  background-color: rgba(240, 248, 255, 0.322);
+  border-radius: 10px;
+}

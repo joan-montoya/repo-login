@@ -1,0 +1,17 @@
+<div>
+  <br><br>
+  <h1><b>Componente en construccion, presentacion de uso de api</b></h1>
+  <br><br>
+</div>
+<div class="row">
+   <div class="col-sm-3" *ngFor="let personaje of personajes">
+    <div class="card" style="width: 18rem;" >
+        <img class="card-img-top" src={{personaje.image}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{personaje.name}}</h5>
+        </div>
+      </div>
+      <br><br>
+   </div> 
+</div>
+    
